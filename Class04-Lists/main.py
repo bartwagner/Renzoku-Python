@@ -114,3 +114,121 @@ for index in range(len(things)):
         break
 print('----------------')
 
+string1 = 'Hello'
+string2 = 'World'
+for index in range(len(string1)):
+    print(string1[index], string2[index])
+print('----------------')
+
+string1 = 'Hello'
+string2 = 'World'
+for i in range(len(string1)):
+    char1 = string1[i]
+    char2 = string2[i]
+    print(char1 + ' ' + char2)
+print('----------------')
+
+string1 = 'Goodbye'
+string2 = 'World'
+lenght1 = len(string1)
+lenght2 = len(string2)
+if lenght1 > lenght2:
+    value = lenght1
+else:
+    value = lenght2
+for i in range(value):
+    if i < lenght1:
+        char1 = string1[i]
+    else:
+        char1 = ' '
+    if i < lenght2:
+        char2 = string2[i]
+    else:
+        char2 = ' '
+    print(char1 + ' ' + char2)
+print('----------------')
+
+print(len)
+print(print)
+print(callable(len))
+print('----------------')
+
+f = 'a string'
+print(callable(f))
+#f() --doesn't work
+print('----------------')
+
+things = [1,2,3]
+length = len(things)
+printed = print(length)
+print(printed)
+print('----------------')
+
+things = print([1,2,3])
+#length = len(things) --doesn't work
+print('----------------')
+
+word = 'Hello'
+print(word.upper)
+print(word.upper())
+print('----------------')
+
+word = 'Hello'
+#word.append('!') --doesn't work
+print('----------------')
+
+nums = [1, 2, 3]
+new_nums = nums + [4, 5]
+print(new_nums)
+print(nums)
+nums.append(4)
+print(nums)
+print('----------------')
+
+nums = [1, 2, 3]
+nums[1] = 9
+print(nums)
+print('----------------')
+
+print([7, 8, 9, 8].index(7))
+print([7, 8, 9, 8].index(8))
+print([7, 8, 9, 8].index(9))
+print('----------------')
+
+nums = [1,2,3]
+print(nums.pop(1))
+print(nums)
+print('----------------')
+
+nums = [1,2,3]
+nums.remove(1)
+print(nums)
+print('----------------')
+
+x = ['a', 'b', 'c']
+x.append(x.pop(0))
+print(x)
+print('----------------')
+
+x = ['a', 'b', 'c']
+x[len(x) - 1] = x[0]
+print(x)
+print('----------------')
+
+x = ['a', 'b', 'c']
+y = x + [x[0]]
+print(y)
+print('----------------')
+
+x = [1, 2, 0, 3]
+x.remove(0)
+print(x)
+print('----------------')
+
+x = [1, 2, 0, 3]
+x.pop(x.index(0))
+print(x)
+print('----------------')
+
+
+print('----------------')
