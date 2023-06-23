@@ -230,5 +230,5 @@ x.pop(x.index(0))
 print(x)
 print('----------------')
 
-
+print(sorted([2, 9, 1, 8, 5, 6]))
 print('----------------')
