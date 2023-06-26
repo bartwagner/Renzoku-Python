@@ -232,3 +232,101 @@ print('----------------')
 
 print(sorted([2, 9, 1, 8, 5, 6]))
 print('----------------')
+
+nums = [2, 9, 1, 8, 5, 64]
+print(7 in nums)
+print(2 in nums)
+print('----------------')
+
+print(sum([5, 3, 4]))
+print('----------------')
+
+print([1, 2, 3, 2, 7, 2, 5].count(2))
+print('----------------')
+
+x = [1, 2, 0, 3]
+y = 1 in x
+print(y)
+print('----------------')
+
+x = [1, 2, 0, 3]
+y = x.count(1) > 0
+print(y)
+print('----------------')
+
+x = [15, 12, -6, 3]
+y = sum(x) / len(x)
+print(y)
+print('----------------')
+
+x = 100
+y = sum(range(x + 1))
+print(y)
+print('----------------')
+
+x = [12, -6, 2, -1, 3]
+y = sorted(x)[1]
+print(y)
+print('----------------')
+
+print('the' in 'feed the dog and the cat')
+print('----------------')
+
+string = 'feed the dog and the cat'
+print(string.count('the'))
+print(string.index('the'))
+print('----------------')
+
+sentence = "Python rocks!"
+new_sentence = sentence.upper()
+print(sentence)
+print(new_sentence)
+print('----------------')
+
+sentence = "YES"
+if sentence.lower() == 'yes':
+    print(sentence)
+print('----------------')
+
+print('append ' + 'len ' + 'sum ' + 'in ' + 'index ' + 'Comments and informations')
+#append
+    #python add element to list
+    #python add item at end of list
+#len
+    #python size of list
+    #python number of elements in list
+    #python how many characters in string
+#sum
+    #python add list of numbers
+    #python total of numbers
+#in
+    #python check if list contains value
+    #python test if list has element
+#index
+    #python get position of element
+    #python get index of value
+print('----------------')
+
+x = [21, 55, 4, 91, 62, 49]
+print(sorted(x)[len(x)-1])
+print('----------------')
+
+print(max([21, 55, 4, 91, 62, 49]))
+print('----------------')
+
+nums = [1, 2, 3, 4, 5]
+nums.append(9)
+print(nums)
+print('----------------')
+
+nums = [1, 2, 3, 4, 5]
+nums.insert(2,9)
+print(nums)
+print('----------------')
+
+print(dir([]))
+print('----------------')
+print('----------------')
+print('----------------')
+print('----------------')
+print('----------------')
