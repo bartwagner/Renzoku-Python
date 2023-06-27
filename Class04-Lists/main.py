@@ -326,7 +326,80 @@ print('----------------')
 
 print(dir([]))
 print('----------------')
+
+all_numbers = [2, 4, 8, 1, 9, 7]
+small_numbers = []
+big_numbers = []
+for number in all_numbers:
+    if number <= 5:
+        small_numbers.append(number)
+    else:
+        big_numbers.append(number)
+
+print(small_numbers)
+print(big_numbers)
 print('----------------')
+
+list1 = [1, 2, 3]
+list2 = [1, 2, 3]
+print(list1)
+print(list2)
+print(list1 == list2)
+print(list1 is list2)
+list1.append(4)
+print(list1)
+print(list2)
 print('----------------')
+
+list1 = [1, 2, 3]
+list2 = list1
+print(list1)
+print(list2)
+print(list1 == list2)
+print(list1 is list2)
+list1.append(4)
+print(list1)
+print(list2)
 print('----------------')
+
+list1 = [1, 2, 3]
+list2 = list1.copy()
+print(list1)
+print(list2)
+print(list1 == list2)
+print(list1 is list2)
+list1.append(4)
+print(list1)
+print(list2)
+print('----------------')
+
+numbers = [10, 7, 8, 3, 12, 15]
+for number in numbers:
+    if number <= 10:
+        numbers.remove(number)
+print(numbers)
+print('----------------')
+
+numbers = [10, 7, 8, 3, 12, 15]
+for number in numbers.copy():
+    if number <= 10:
+        numbers.remove(number)
+print(numbers)
+print('----------------')
+
+numbers = [10, 7, 8, 3, 12, 15]
+big_numbers = numbers.copy()
+for number in numbers:
+    if number <= 10:
+        big_numbers.remove(number)
+print(big_numbers)
+print('----------------')
+
+numbers = [10, 7, 8, 3, 12, 15]
+big_numbers = []
+
+for number in numbers:
+    if number > 10:
+        big_numbers.append(number)
+print(big_numbers)
 print('----------------')
