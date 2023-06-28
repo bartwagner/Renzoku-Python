@@ -102,6 +102,80 @@ for sublist in numbers:
     print('---')
 print('----------------')
 
-
+strings = [
+    [
+        "hello there",
+        "how are you",
+    ],
+    [
+        "goodbye world",
+        "hello world",
+    ]
+]
+word = "hello"
+for sublist in strings:
+    for string in sublist:
+        if word in string:
+            print(string)
 print('----------------')
+
+strings = [
+    [
+        "hello there",
+        "how are you",
+    ],
+    [
+        "goodbye world",
+        "hello world",
+    ]
+]
+word = "goodbye"
+for sublist in strings:
+    present = False
+    for string in sublist:
+        if word in string:
+            present = True
+    print(present)
+print('----------------')
+
+strings = [
+    [
+        "hello there",
+        "how are you",
+    ],
+    [
+        "goodbye world",
+        "hello world",
+    ]
+]
+word = "are"
+present = False
+for sublist in strings:
+    for string in sublist:
+        if word in string:
+            present = True
+print(present)
+print('----------------')
+
+strings = ["  b n", "f ete", "liths", "astat", "t ene", "  r d"]
+for i in range(len(strings[0])):
+    line = ""
+    for string in strings:
+        line+=string[i]
+    print(line)
+print('----------------')
+
+strings = ["abcqwe", "def", "ghiq"]
+lenghts = []
+for string in strings:
+    lenghts.append(len(string))
+length = max(lenghts)
+for i in range(length):
+    line = ""
+    for string in strings:
+        if i >=len(string):
+            line+=" "
+        else:
+            line+=string[i]
+    print(line)
 print('----------------')
