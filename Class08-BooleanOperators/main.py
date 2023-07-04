@@ -113,3 +113,82 @@ assert_equal(all_equal(["X", "X", "X"]), True)
 assert_equal(all_equal(["O", "O", "O"]), True)
 assert_equal(all_equal(["X", "O", "X"]), False)
 print('---------------------------')
+
+name = "Bob"
+is_friend = name == "Alice" or \
+            name == "Bob"
+print(is_friend)
+is_friend = (name == "Alice" or
+             name == "Bob")
+print(is_friend)
+is_friend = [name == "Alice",
+             name == "Bob"]
+print(is_friend)
+print(name == "Alice" or
+      name == "Bob")
+print('---------------------------')
+
+True or False and False
+(True or False) and False
+True or (False and False)
+print('---------------------------')
+
+def assert_equal(actual, expected):
+    if actual == expected:
+        print("OK")
+    else:
+        print(f"Error! {repr(actual)} != {repr(expected)}")
+def diagonal_winner(board):
+    middle = board[1][1]
+    return(
+            (middle == board[0][0] and middle == board[2][2]) or
+            (middle == board[0][2] and middle == board[2][0])
+        )
+assert_equal(
+    diagonal_winner(
+        [
+            ['X', 'O', 'X'],
+            ['X', 'X', 'O'],
+            ['O', 'O', 'X']
+        ]
+    ),
+    True
+)
+assert_equal(
+    diagonal_winner(
+        [
+            ['X', 'X', 'O'],
+            ['X', 'O', 'O'],
+            ['O', 'X', 'X']
+        ]
+    ),
+    True
+)
+assert_equal(
+    diagonal_winner(
+        [
+            ['O', 'X', 'O'],
+            ['X', 'X', 'X'],
+            ['O', 'O', 'X']
+        ]
+    ),
+    False
+)
+print('---------------------------')
+
+b = True
+print(not b or b)
+print('---------------------------')
+
+def assert_equal(actual, expected):
+    if actual == expected:
+        print("OK")
+    else:
+        print(f"Error! {repr(actual)} != {repr(expected)}")
+def invalid_image(filename):
+    return not (filename.endswith(".png") or filename.endswith(".jpg"))
+assert_equal(invalid_image("dog.png"), False)
+assert_equal(invalid_image("cat.jpg"), False)
+assert_equal(invalid_image("invoice.pdf"), True)
+print('---------------------------')
+
