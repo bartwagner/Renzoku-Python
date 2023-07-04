@@ -1,5 +1,5 @@
 def greet(name):
-    print (f"Hello {name}!")
+    print(f"Hello {name}!")
     print("How are you?")
 greet("Alice")
 greet("Bob")
@@ -83,5 +83,78 @@ assert_equal(quadruple(2), 8)
 assert_equal(quadruple(5), 20)
 print('------------------------')
 
+def assert_equal(actual, expected):
+    if actual == expected:
+        print("OK")
+    else:
+        print(f"Error! {repr(actual)} != {repr(expected)}")
+def surround(string, sides):
+    return sides + string + sides
+assert_equal(surround("more", "++"), "++more++")
+assert_equal(surround("the same", "="), "=the same=")
+print('------------------------')
 
+def assert_equal(actual, expected):
+    if actual == expected:
+        print("OK")
+    else:
+        print(f"Error! {repr(actual)} != {repr(expected)}")
+def alert(string, level):
+    returnNumber = ''
+    for _ in range(level):
+        returnNumber += '!'
+    return returnNumber + " " + string + " " + returnNumber
+assert_equal(alert("Warning", 2), "!! Warning !!")
+assert_equal(alert("DANGER", 4), "!!!! DANGER !!!!")
+print('------------------------')
+
+
+def assert_equal(actual, expected):
+    if actual == expected:
+        print("OK")
+    else:
+        print(f"Error! {repr(actual)} != {repr(expected)}")
+def surround(string, sides):
+    return sides + string + sides
+def alert(string, level):
+    string = surround(string, ' ')
+    for _ in range(level):
+        string = surround(string, '!')
+    return string
+assert_equal(alert("Warning", 2), "!! Warning !!")
+assert_equal(alert("DANGER", 4), "!!!! DANGER !!!!")
+print('------------------------')
+
+def foo():
+    return 1
+    return 2
+print(foo())
+print('------------------------')
+def assert_equal(actual, expected):
+    if actual == expected:
+        print("OK")
+    else:
+        print(f"Error! {repr(actual)} != {repr(expected)}")
+def double_numbers(numbers):
+    for x in numbers:
+        return x * 2
+assert_equal(double_numbers([1, 2, 3]), [2, 4, 6])
+print('------------------------')
+
+def foo():
+    for letter in 'abc':
+        for number in range(3):
+            print(f"{letter} {number}")
+            if letter == 'b':
+                return letter
+foo()
+print('------------------------')
+
+def foo():
+    for letter in 'abc':
+        for number in range(3):
+            print(f"{letter} {number}")
+            if letter == 'b':
+                break
+foo()
 print('------------------------')
