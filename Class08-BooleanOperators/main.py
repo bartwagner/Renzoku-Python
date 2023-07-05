@@ -191,4 +191,3 @@ assert_equal(invalid_image("dog.png"), False)
 assert_equal(invalid_image("cat.jpg"), False)
 assert_equal(invalid_image("invoice.pdf"), True)
 print('---------------------------')
-
