@@ -354,3 +354,65 @@ assert_equal(
 )
 print('-----------------------')
 
+print(type('Hello World'))
+print(type(23))
+print(type(True))
+print(type([1, 2, 3]))
+print(type(4.56))
+print('-----------------------')
+
+print(type(3) == int)
+print('-----------------------')
+
+print(type('123'))
+print(type(123))
+print(123 == '123')
+print('-----------------------')
+
+print(123 + 456)
+print('123' + '456')
+print('-----------------------')
+
+print(13 < 120)
+print('13' < '120')
+print('-----------------------')
+
+print(sorted([120, 13, 0]))
+print(sorted(['120', '13', '0']))
+print('-----------------------')
+
+number = '3'
+for i in range(int(number)):
+    print('Starting...', i + 1)
+print('Go!')
+print('-----------------------')
+
+def assert_equal(actual, expected):
+    if actual == expected:
+        print("OK")
+    else:
+        print(f"Error! {repr(actual)} != {repr(expected)}")
+def format_board(board):
+    first_row = ' '
+    for i in range(len(board)):
+        first_row += str(i + 1)
+    joined_rows = [first_row]
+    for i in range(len(board)):
+        joined_row = str(i + 1) + ''.join(board[i])
+        joined_rows.append(joined_row)
+    return "\n".join(joined_rows)
+assert_equal(
+    format_board([
+        ['X', 'O', 'X'],
+        ['O', ' ', ' '],
+        [' ', 'X', 'O']
+    ]),
+    ' 123\n1XOX\n2O  \n3 XO'
+)
+print('-----------------------')
+
+print('Type your name, then press Enter:')
+name = input()
+print(f'Hello {name}!')
+print('-----------------------')
+
