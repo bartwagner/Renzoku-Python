@@ -416,3 +416,63 @@ name = input()
 print(f'Hello {name}!')
 print('-----------------------')
 
+super_secret_number = 7
+print("What number am I thinking of?")
+guess = int(input())
+if guess == super_secret_number:
+    print("Amazing! Are you psychic?")
+else:
+    print("Nope!")
+print('-----------------------')
+
+def play_move(board, player):
+    board[1] = player
+def play_game():
+    game_board = [" ", " ", " "]
+    play_move(game_board, "X")
+    print(game_board)
+play_game()
+print('-----------------------')
+
+def play_move(board, player):
+    row = board[1]
+    row[0] = player
+def play_game():
+    board = [
+        [" ", " ", " "],
+        [" ", " ", " "],
+        [" ", " ", " "],
+    ]
+    play_move(board, "X")
+    print(board)
+play_game()
+print('-----------------------')
+
+def format_board(board):
+    first_row = ' '
+    for i in range(len(board)):
+        first_row += str(i + 1)
+    joined_rows = [first_row]
+    for i in range(len(board)):
+        joined_row = str(i + 1) + ''.join(board[i])
+        joined_rows.append(joined_row)
+    return "\n".join(joined_rows)
+def play_game():
+    board = [
+        [' ', ' ', ' '],
+        [' ', ' ', ' '],
+        [' ', ' ', ' '],
+    ]
+    print(format_board(board))
+    print('\nX to play:\n')
+    play_move(board, 'X')
+    print(format_board(board))
+    print('\nO to play:\n')
+    play_move(board, 'O')
+    print(format_board(board))
+def play_move(board, player):
+    row = int(input()) -1
+    col = int(input()) -1
+    board[row][col] = player
+play_game()
+print('-----------------------')
